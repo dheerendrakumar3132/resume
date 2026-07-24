@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Samples - Novaplexes Resume</title>
+           <!-- Favicon -->
+    <link rel="icon" href="logo.jpeg" type="image/jpeg" sizes="1024x1024">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9fb;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 { color: #222; margin-top: 0; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Header */
+        header {
+            background-color: #fff;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 26px; font-weight: 800; color: #0056b3; letter-spacing: 1px; }
+        .header-right { display: flex; align-items: center; gap: 30px; }
+        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        nav ul li a { font-weight: 600; color: #555; transition: color 0.3s; }
+        nav ul li a:hover { color: #0056b3; }
+        .start-btn { background-color: #25D366; color: white; padding: 8px 25px; border-radius: 5px; font-weight: bold; transition: 0.3s; box-shadow: 0 2px 8px rgba(37, 211, 102, 0.4); }
+        .start-btn:hover { background-color: #1ebe57; }
+
+        /* Page Banner */
+        .page-banner {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0056b3, #003d82);
+            color: white;
+        }
+        .page-banner h1 { font-size: 48px; margin-bottom: 15px; color: white; letter-spacing: -1px; }
+        .page-banner p { font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.9; }
+
+        /* General Layout */
+        .section-container { padding: 80px 20px; max-width: 1200px; margin: auto; }
+        .text-center { text-align: center; }
+        .section-title { font-size: 36px; margin-bottom: 20px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background: #ff9800; display: block; margin: 10px auto 0 auto; border-radius: 2px; }
+        .lead-text { font-size: 18px; color: #555; margin-bottom: 40px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        /* Samples Grid - Adjusted for 6 items */
+        .samples-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .sample-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+        .sample-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        /* Image Container */
+        .sample-img-container {
+            width: 100%;
+            height: 450px; /* Bada height taaki resume saaf dikhe */
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+        }
+        .sample-img-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .sample-card:hover .sample-img-container img {
+            transform: scale(1.03); /* Hover par halka zoom */
+        }
+        
+        .sample-info {
+            padding: 30px 25px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .sample-info h3 { font-size: 22px; color: #222; margin-bottom: 10px; }
+        .sample-info p { color: #666; font-size: 15px; margin-bottom: 25px; line-height: 1.6; flex-grow: 1; }
+        
+        .badge-premium {
+            display: inline-block;
+            background: #e8f4fc;
+            color: #0056b3;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            align-self: center;
+        }
+
+        .cta-btn {
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .cta-btn:hover { background-color: #e68a00; }
+
+        /* Detailed Footer */
+        footer { background-color: #1a1a2e; color: #b2b2cb; padding: 60px 20px 20px 20px; font-size: 15px; }
+        .footer-container { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 40px; }
+        .footer-col { flex: 1; min-width: 200px; }
+        .footer-col h3 { color: #fff; font-size: 20px; margin-bottom: 20px; }
+        .footer-col p { margin-bottom: 15px; line-height: 1.7; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: #b2b2cb; transition: color 0.3s; }
+        .footer-col ul li a:hover { color: #ff9800; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #2f2f4f; color: #888; }
+        .footer-bottom p { margin: 5px 0; }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .samples-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 15px 20px; gap: 15px; }
+            .header-right { flex-direction: column; gap: 15px; width: 100%; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .start-btn { width: 100%; text-align: center; }
+            
+            .page-banner { padding: 60px 20px; }
+            .page-banner h1 { font-size: 36px; }
+            
+            .samples-grid { grid-template-columns: 1fr; }
+            .sample-img-container { height: auto; max-height: 500px; }
+            
+            .footer-container { flex-direction: column; text-align: center; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+    <div class="logo">
+    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+        <!-- Logo Image yahan hai -->
+        <img src="logo.jpeg" alt="Logo" style="height: 35px; width: auto;">
+        NovaplexesResume
+    </a>
+</div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="samples.html">View Samples</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/919454161648?text=Hi! I want to Start building my resume." target="_blank" class="start-btn">Start</a>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>Our Resume Samples</h1>
+        <p>Explore our premium LaTeX-based layouts. 100% ATS-friendly, clean, and professional designs guaranteed to pass HR filters and get you hired.</p>
+    </section>
+
+    <!-- Main Content Container -->
+    <section class="section-container" id="samples">
+        <div class="text-center">
+            <h2 class="section-title">Industry-Standard Templates</h2>
+            <p class="lead-text">We use highly respected, modern formatting structures to ensure your resume stands out visually while parsing perfectly in all Applicant Tracking Systems.</p>
+        </div>
+
+        <div class="samples-grid">
+            
+            <!-- Sample 1 -->
+            <div class="sample-card">
+                <div class="sample-img-container">
+                    <!-- IMAGE YAHAN AAYEGI -->
+                    <!-- Aapko 'sample1.jpg' naam ki file apne folder me rakhni hogi -->
+                    <img src="sample1.jpg" alt="Standard ATS Format" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Image+Missing\\nUpload+sample1.jpg'">
+                </div>
+                <div class="sample-info">
+                    <span class="badge-premium">Premium Style</span>
+                    <h3>The Standard ATS</h3>
+                    <p>A classic, no-nonsense format heavily favored by top tech companies, software engineers, and traditional corporate roles. Simple yet highly effective.</p>
+                    <a href="https://wa.me/919454161648?text=Hi! I want to order a resume using The Standard ATS layout." target="_blank" class="cta-btn">Request This Format</a>
+                </div>
+            </div>
+
+            <!-- Sample 2 -->
+            <div class="sample-card">
+                <div class="sample-img-container">
+                    <!-- IMAGE YAHAN AAYEGI -->
+                    <img src="sample2.jpg" alt="Modern Tech Format" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Image+Missing\\nUpload+sample2.jpg'">
+                </div>
+                <div class="sample-info">
+                    <span class="badge-premium">Premium Style</span>
+                    <h3>The Modern Tech</h3>
+                    <p>A highly popular two-column format perfect for developers and data scientists who want to densely pack skills and projects onto a single page.</p>
+                    <a href="https://wa.me/919454161648?text=Hi! I want to order a resume using The Modern Tech layout." target="_blank" class="cta-btn">Request This Format</a>
+                </div>
+            </div>
+
+            <!-- Sample 3 -->
+            <div class="sample-card">
+                <div class="sample-img-container">
+                    <!-- IMAGE YAHAN AAYEGI -->
+                    <img src="sample3.jpg" alt="Executive Design Format" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Image+Missing\\nUpload+sample3.jpg'">
+                </div>
+                <div class="sample-info">
+                    <span class="badge-premium">Premium Style</span>
+                    <h3>The Executive CV</h3>
+                    <p>A premium and elegant design featuring colored accent headers. Ideal for Management, Marketing, Finance, and Senior Leadership roles.</p>
+                    <a href="https://wa.me/919454161648?text=Hi! I want to order a resume using The Executive CV layout." target="_blank" class="cta-btn">Request This Format</a>
+                </div>
+            </div>
+
+            <!-- Sample 4 -->
+            <div class="sample-card">
+                <div class="sample-img-container">
+                    <!-- IMAGE YAHAN AAYEGI -->
+                    <img src="sample4.jpg" alt="Creative Minimalist Format" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Image+Missing\\nUpload+sample4.jpg'">
+                </div>
+                <div class="sample-info">
+                    <span class="badge-premium">Premium Style</span>
+                    <h3>Creative Minimalist</h3>
+                    <p>A highly customized structure with clean typography and modern spacing. Best suited for designers, consultants, and creative professionals.</p>
+                    <a href="https://wa.me/919454161648?text=Hi! I want to order a resume using The Creative Minimalist layout." target="_blank" class="cta-btn">Request This Format</a>
+                </div>
+            </div>
+
+            <!-- Sample 5 -->
+            <div class="sample-card">
+                <div class="sample-img-container">
+                    <!-- IMAGE YAHAN AAYEGI -->
+                    <img src="sample5.jpg" alt="Academic Professional Format" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Image+Missing\\nUpload+sample5.jpg'">
+                </div>
+                <div class="sample-info">
+                    <span class="badge-premium">Premium Style</span>
+                    <h3>The Academic Scholar</h3>
+                    <p>A structured, multi-page friendly format designed specifically for professors, researchers, and candidates applying for higher education programs.</p>
+                    <a href="https://wa.me/919454161648?text=Hi! I want to order a resume using The Academic Scholar layout." target="_blank" class="cta-btn">Request This Format</a>
+                </div>
+            </div>
+
+            <!-- Sample 6 -->
+            <div class="sample-card">
+                <div class="sample-img-container">
+                    <!-- IMAGE YAHAN AAYEGI -->
+                    <img src="sample6.jpg" alt="Two Column Professional Format" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Image+Missing\\nUpload+sample6.jpg'">
+                </div>
+                <div class="sample-info">
+                    <span class="badge-premium">Premium Style</span>
+                    <h3>Two-Column Professional</h3>
+                    <p>A balanced design that separates contact details and skills into a neat sidebar, leaving plenty of room for extensive work experience in the main body.</p>
+                    <a href="https://wa.me/919454161648text=Hi! I want to order a resume using The Two-Column Professional layout." target="_blank" class="cta-btn">Request This Format</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Detailed Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>NovaplexesResume</h3>
+                <p>India's trusted expert resume writing service. We help job seekers crack their next interview with perfectly handcrafted, ATS-friendly CVs.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#pricing">Pricing Plans</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Legal & Privacy</h3>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="refund-policy.html">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Need help? Our team is always ready to assist you.</p>
+                <ul>
+                    <li>Email: support@novaplexesresume.com</li>
+                    <li>WhatsApp: +91 9140092735</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NovaplexesResume. All rights reserved.</p>
+            <p>Designed & Developed by Novaplexes for Job Seekers ❤️</p>
+        </div>
+    </footer>
+
+</body>
+</html>
